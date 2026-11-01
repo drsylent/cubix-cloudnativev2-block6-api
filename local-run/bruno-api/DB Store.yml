@@ -1,0 +1,23 @@
+info:
+  name: DB Store
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{host}}/training/store"
+  body:
+    type: json
+    data: |-
+      {
+          "message": "Hello!",
+          "leftNumber": 1,
+          "rightNumber": 2
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true
